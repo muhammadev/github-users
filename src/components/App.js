@@ -33,7 +33,7 @@ class App extends React.Component {
 
     render() {
         return this.state.users? (
-            <Router basename={process.env.PUBLIC_URL}>
+            <Router basename="/github-users">
                 <Switch>
                     <Route path="/" exact>
                         <Avatars avatars={this.state.users} delAvatar={this.delAvatar} />
