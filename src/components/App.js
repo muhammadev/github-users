@@ -2,6 +2,8 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Avatars from "./Avatars";
 import Avatar from "./Avatar";
+import "bootstrap/dist/css/bootstrap.css";
+import "../style.css"
 
 class App extends React.Component {
     state = {
