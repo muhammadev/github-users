@@ -4,18 +4,28 @@
     font-family: monospace;
   }
   
-  .back-btn{
+  .nav-btn{
     width:50px; height:50px;
     font-size: 40px;
     display: inline-block;
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
     text-align:center;
     line-height: 1;
     color:#000;
+    z-index: 10000;
   }
 
-  .back-btn:hover{
+  .left-btn{
+    top:50%;
+    left:0;
+  }
+  .right-btn{
+    top:50%;
+    right:0;
+  }
+
+  .nav-btn:hover{
     background: #333;
     color: #fff;
   }
