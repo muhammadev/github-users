@@ -15,8 +15,7 @@ class App extends React.Component {
                 this.setState({users})
                 let usernames = [];
                 users.map(user => {
-                    usernames.push(user.login)
-                    return
+                    return usernames.push(user.login)
                 })
                 this.setState({usernames})
             })
@@ -36,10 +35,12 @@ class App extends React.Component {
     render() {
         return this.state.users? (
             <Router basename="/github-users">
-                <Route path="/" exact>
-                    <Avatars avatars={this.state.users} delAvatar={this.delAvatar} />
-                </Route>
-                <Route path="/:login" render={(props) => <Avatar {...props} usernames={this.state.usernames}/>}></Route>
+                <Switch>
+                    <Route path="/" exact>
+                        <Avatars avatars={this.state.users} delAvatar={this.delAvatar} />
+                    </Route>
+                </Switch>
+                <Route path="/:login" exact render={(props) => <Avatar {...props} usernames={this.state.usernames}/>}></Route>
             </Router>
         ) : (
             <div className="loadMsg">loading....</div>

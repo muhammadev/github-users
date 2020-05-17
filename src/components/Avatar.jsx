@@ -44,7 +44,6 @@ class Avatar extends React.Component {
         let next = this.props.usernames[current + 1];
         let previous = current === 0? "" : this.props.usernames[current - 1];
         this.setState({next, previous})
-        // console.log(this.props.usernames[previous])
       })
   }
   
@@ -57,36 +56,36 @@ class Avatar extends React.Component {
             <path fillRule="evenodd" d="M4.5 8a.5.5 0 01.5-.5h6.5a.5.5 0 010 1H5a.5.5 0 01-.5-.5z" clipRule="evenodd"/>
           </svg>
         </Link>
-        {this.state.previous? (
-          <a href={"/" + this.state.previous} className="nav-btn left-btn">
+        {/* {this.state.previous? (
+          <Link to={"/" + this.state.previous} className="nav-btn left-btn">
             <svg className="bi bi-arrow-left-short" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path fillRule="evenodd" d="M7.854 4.646a.5.5 0 010 .708L5.207 8l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z" clipRule="evenodd"/>
               <path fillRule="evenodd" d="M4.5 8a.5.5 0 01.5-.5h6.5a.5.5 0 010 1H5a.5.5 0 01-.5-.5z" clipRule="evenodd"/>
             </svg>
-          </a>
+          </Link>
         ) : (
-          <a href="/" className="nav-btn left-btn">
+          <Link to="/" className="nav-btn left-btn">
             <svg className="bi bi-arrow-left-short" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path fillRule="evenodd" d="M7.854 4.646a.5.5 0 010 .708L5.207 8l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z" clipRule="evenodd"/>
               <path fillRule="evenodd" d="M4.5 8a.5.5 0 01.5-.5h6.5a.5.5 0 010 1H5a.5.5 0 01-.5-.5z" clipRule="evenodd"/>
             </svg>
-          </a>
+          </Link>
         )}
         {this.state.next? (
-        <a href={"/" + this.state.next} className="nav-btn right-btn">
+        <Link to={"/" + this.state.next} className="nav-btn right-btn">
           <svg className="bi bi-arrow-right-short" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fillRule="evenodd" d="M8.146 4.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L10.793 8 8.146 5.354a.5.5 0 010-.708z" clipRule="evenodd"/>
             <path fillRule="evenodd" d="M4 8a.5.5 0 01.5-.5H11a.5.5 0 010 1H4.5A.5.5 0 014 8z" clipRule="evenodd"/>
           </svg>
-        </a>
+        </Link>
         ) : (
-          <a href="/" className="nav-btn right-btn">
+          <Link to="/" className="nav-btn right-btn">
             <svg className="bi bi-arrow-right-short" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path fillRule="evenodd" d="M8.146 4.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L10.793 8 8.146 5.354a.5.5 0 010-.708z" clipRule="evenodd"/>
               <path fillRule="evenodd" d="M4 8a.5.5 0 01.5-.5H11a.5.5 0 010 1H4.5A.5.5 0 014 8z" clipRule="evenodd"/>
             </svg>
-          </a>
-        )}
+          </Link>
+        )} */}
         {this.state.avatar? (
             <React.Fragment>
               <ThisAvatar avatar={this.state.avatar}/>
@@ -99,8 +98,5 @@ class Avatar extends React.Component {
   }
 
 }
-
-//let prevBtn = document.querySelector(".prev");
-//console.log("prev btn", prevBtn)
 
 export default Avatar;
