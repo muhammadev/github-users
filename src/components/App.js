@@ -14,6 +14,7 @@ class App extends React.Component {
                 let usernames = [];
                 users.map(user => {
                     usernames.push(user.login)
+                    return
                 })
                 this.setState({usernames})
             })

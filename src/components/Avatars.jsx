@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom";
 import AvatarCard from "./AvatarCard";
 
 class Avatars extends React.Component {

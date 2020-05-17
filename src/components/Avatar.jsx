@@ -10,7 +10,7 @@ class ThisAvatar extends React.Component {
         <h1 className="header mt-5">{name}</h1>
         <div className="data-container row">
           <div className="col-lg-4">
-            <img src={avatar_url} />
+            <img src={avatar_url} alt="avatar img"/>
           </div>
           <div className="col-lg-8">
             <ul>
@@ -56,9 +56,6 @@ class Avatar extends React.Component {
             <path fillRule="evenodd" d="M4.5 8a.5.5 0 01.5-.5h6.5a.5.5 0 010 1H5a.5.5 0 01-.5-.5z" clipRule="evenodd"/>
           </svg>
         </Link>
-        {this.props.usernames? (
-          <a className="prev" href={this.state.previous >= 0?"/"+this.props.usernames[this.state.previous]: "/"}>previous</a>
-        ) : ("")}
         {this.state.avatar? (
             <React.Fragment>
               <ThisAvatar avatar={this.state.avatar}/>
